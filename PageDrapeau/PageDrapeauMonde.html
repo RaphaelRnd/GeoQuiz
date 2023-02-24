@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+            <title>GéoQuiz</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+        </style>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="PageDrapeauGlobal.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">GéoQuiz</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="PageAccueil.html">Accueil
+                        </a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="PageDrapeau.html">Drapeau</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">GéoQuiz</h1>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Trouve un pays d'Europe qui correspond au drapeau </p>
+            </div> 
+        </header>
+        <!-- Portfolio Section-->
+        <div class="scrollbar" id="style-1">
+      <div class="force-overflow"></div>
+    </div>
+         <section class="sec1">
+            <div class="container">
+                <div class="cadrejeu">
+                    <div class="image">
+                        <img id="flag" src="">
+                    </div>
+
+                    <div class="reponses">
+                        <div class="reponse"></div>
+                        <div class="reponse"></div>
+                        <div class="reponse"></div>
+                        <div class="reponse"></div>
+                    </div>
+                </div>
+
+                <div class="cadreréponse">
+                    <div class="imageréponse">
+                        <img id="flagréponse" src="">
+                    </div>
+                        <h2 class="Proposition"></h2>
+                        <h2 class="Réponse"></h2>
+                        <h2 class="Compteur"></h2>
+                        <h2 class="Fin"></h2>
+                </div>
+            </div>
+
+            <div class="recommencer">
+                <button class="boutonrecommencer" onclick="reset()">Recommencer</button>
+            </div>
+        </section>
+
+        <section class="sec2">
+    <div class="cadrevérif" id="scroller">
+            <ul class="box-grid">
+                <li>
+                  <img src="" >
+                </li> 
+            </ul>
+    </div>
+
+    </section>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Pour me suivre : </h4>
+                        <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://twitter.com/Volcanooo_"><i class="fab fa-fw fa-twitter"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-6">
+                        <h4 class="text-uppercase mb-4">A propos du site :</h4>
+                        <p class="lead mb-0">
+                            Ce site à été réalisé dans le but d'un projet personnel et se développera au fil du temps.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Volcano 2023</small></div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+    <script>
+        window.addEventListener('DOMContentLoaded', event => {
+
+    // Navbar shrink function
+    var navbarShrink = function () {
+        const navbarCollapsible = document.body.querySelector('#mainNav');
+        if (!navbarCollapsible) {
+            return;
+        }
+        if (window.scrollY === 0) {
+            navbarCollapsible.classList.remove('navbar-shrink')
+        } else {
+            navbarCollapsible.classList.add('navbar-shrink')
+        }
+
+    };
+
+    // Shrink the navbar 
+    navbarShrink();
+
+    // Shrink the navbar when page is scrolled
+    document.addEventListener('scroll', navbarShrink);
+
+    // Activate Bootstrap scrollspy on the main nav element
+    const mainNav = document.body.querySelector('#mainNav');
+    if (mainNav) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#mainNav',
+            offset: 72,
+        });
+    };
+
+    // Collapse responsive navbar when toggler is visible
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .nav-link')
+    );
+    responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
+    });
+
+        const GRID = document.querySelector('.box-grid');
+
+        let affichedrapeau = ["../images/Europe/DrapeauAlbanie.png","../images/Europe/DrapeauAllemagne.png", "../images/Europe/DrapeauAndorre.png",
+        "../images/Europe/DrapeauAutriche.png", "../images/Europe/DrapeauArménie.png", "../images/Europe/DrapeauBelgique.png", "../images/Europe/DrapeauBiélorussie.png" , 
+        "../images/Europe/DrapeauBosnie-Herzégovine.png", "../images/Europe/DrapeauBulgarie.png", "../images/Europe/DrapeauChypre.png",
+        "../images/Europe/DrapeauCroatie.png", "../images/Europe/DrapeauDanemark.png", "../images/Europe/DrapeauEspagne.png", "../images/Europe/DrapeauEstonie.png", 
+        "../images/Europe/DrapeauFinlande.png", "../images/Europe/DrapeauFrance.png", "../images/Europe/DrapeauGéorgie.png" , "../images/Europe/DrapeauGrèce.png", 
+        "../images/Europe/DrapeauHongrie.png", "../images/Europe/DrapeauIrlande.png", "../images/Europe/DrapeauIslande.png", "../images/Europe/DrapeauItalie.png", 
+        "../images/Europe/DrapeauKosovo.png","../images/Europe/DrapeauLettonie.png", "../images/Europe/DrapeauLiechtenstein.png",
+        "../images/Europe/DrapeauLituanie.png", "../images/Europe/DrapeauLuxembourg.png", "../images/Europe/DrapeauMacédoine.png", 
+        "../images/Europe/DrapeauMalte.png", "../images/Europe/DrapeauMoldavie.png" ,"../images/Europe/DrapeauMonaco.png", "../images/Europe/DrapeauMonténégro.png",
+        "../images/Europe/DrapeauNorvège.png", "../images/Europe/DrapeauPays-Bas.png", "../images/Europe/DrapeauPologne.png", "../images/Europe/DrapeauPortugal.png", 
+        "../images/Europe/DrapeauRépublique tchèque.png", "../images/Europe/DrapeauRoumanie.png", "../images/Europe/DrapeauRoyaume-Uni.png", 
+        "../images/Europe/DrapeauRussie.png", "../images/Europe/DrapeauSaint-Marin.png" ,"../images/Europe/DrapeauSerbie.png", "../images/Europe/DrapeauSlovaquie.png", 
+        "../images/Europe/DrapeauSlovénie.png", "../images/Europe/DrapeauSuède.png" , "../images/Europe/DrapeauSuisse.png" , "../images/Europe/DrapeauTurquie.png" , 
+        "../images/Europe/DrapeauUkraine.png", "../images/Europe/DrapeauVatican.png","../images/Amérique/DrapeauAntigua-et-Barbuda.png", "../images/Amérique/DrapeauArgentine.png", "../images/Amérique/DrapeauBahamas.png", 
+        "../images/Amérique/DrapeauBarbade.png", "../images/Amérique/DrapeauBelize.png", "../images/Amérique/DrapeauBolivie.png", "../images/Amérique/DrapeauBrésil.png", 
+        "../images/Amérique/DrapeauCanada.png", "../images/Amérique/DrapeauChili.png", "../images/Amérique/DrapeauColombie.png","../images/Amérique/DrapeauCosta Rica.png",
+        "../images/Amérique/DrapeauCuba.png", "../images/Amérique/DrapeauDominique.png", "../images/Amérique/DrapeauEquateur.png", 
+        "../images/Amérique/DrapeauEtats-Unis.png","../images/Amérique/DrapeauEl Salvador.png" , "../images/Amérique/DrapeauGrenade.png", "../images/Amérique/DrapeauGuatemala.png", 
+        "../images/Amérique/DrapeauGuyane.png", "../images/Amérique/DrapeauHaïti.png", "../images/Amérique/DrapeauHonduras.png", "../images/Amérique/DrapeauJamaïque.png", 
+        "../images/Amérique/DrapeauMexique.png", "../images/Amérique/DrapeauNicaragua.png", "../images/Amérique/DrapeauPanama.png", 
+        "../images/Amérique/DrapeauParaguay.png", "../images/Amérique/DrapeauPérou.png", "../images/Amérique/DrapeauPuerto Rico.png","../images/Amérique/DrapeauRépublique dominicaine.png", 
+        "../images/Amérique/DrapeauSaint-Kitts-et-Nevis.png", "../images/Amérique/DrapeauSainte-Lucie.png",
+         "../images/Amérique/DrapeauSuriname.png", "../images/Amérique/DrapeauTrinité-et-Tobago.png", "../images/Amérique/DrapeauUruguay.png", 
+        "../images/Amérique/DrapeauVenezuela.png","../images/Océanie/DrapeauAustralie.png", "../images/Océanie/DrapeauFidji.png", "../images/Océanie/DrapeauKiribati.png", "../images/Océanie/DrapeauMicronésie.png", "../images/Océanie/DrapeauNauru.png", "../images/Océanie/DrapeauNouvelle-Zélande.png", "../images/Océanie/DrapeauPalau.png", "../images/Océanie/DrapeauPapouasie-Nouvelle-Guinée.png", "../images/Océanie/DrapeauSamoa.png", "../images/Océanie/DrapeauTimor oriental.png ", "../images/Océanie/DrapeauTonga.png", "../images/Océanie/DrapeauTuvalu.png", "../images/Océanie/DrapeauVanuatu.png", "../images/Océanie/DrapeauÎles Marshall.png", "../images/Océanie/DrapeauÎles Salomon.png","../images/Afrique/DrapeauAlgérie.png", "../images/Afrique/DrapeauAngola.png", "../images/Afrique/DrapeauBénin.png", "../images/Afrique/DrapeauBotswana.png", "../images/Afrique/DrapeauBurkina Faso.png", "../images/Afrique/DrapeauBurundi.png", "../images/Afrique/DrapeauTchad.png", "../images/Afrique/DrapeauDjibouti.png", "../images/Afrique/DrapeauRD Congo.png", "../images/Afrique/DrapeauEgypte.png", "../images/Afrique/DrapeauÉrythrée.png", "../images/Afrique/DrapeauÉthiopie.png", "../images/Afrique/DrapeauGabon.png", "../images/Afrique/DrapeauGambie.png", "../images/Afrique/DrapeauGhana.png", "../images/Afrique/DrapeauGuinée.png", "../images/Afrique/DrapeauGuinée-Bissau.png", "../images/Afrique/DrapeauGuinée équatoriale.png", "../images/Afrique/DrapeauCameroun.png", "../images/Afrique/DrapeauKenya.png", "../images/Afrique/DrapeauComores.png", "../images/Afrique/DrapeauCongo.png", "../images/Afrique/DrapeauLesotho.png", "../images/Afrique/DrapeauLibéria.png", "../images/Afrique/DrapeauLibye.png", "../images/Afrique/DrapeauMadagascar.png", "../images/Afrique/DrapeauMalawi.png", "../images/Afrique/DrapeauMali.png", "../images/Afrique/DrapeauMaroc.png", "../images/Afrique/DrapeauMauritanie.png", "../images/Afrique/DrapeauÎle Maurice.png", "../images/Afrique/DrapeauMozambique.png", "../images/Afrique/DrapeauNamibie.png", "../images/Afrique/DrapeauNiger.png", "../images/Afrique/DrapeauNigeria.png", "../images/Afrique/DrapeauAfrique du Sud.png", "../images/Afrique/DrapeauRépublique CA.png", "../images/Afrique/DrapeauCap-Vert.png", "../images/Afrique/DrapeauRwanda.png", "../images/Afrique/DrapeauSahara occidental.png", "../images/Afrique/DrapeauSénégal.png", "../images/Afrique/DrapeauSeychelles.png", "../images/Afrique/DrapeauSierra Leone.png", "../images/Afrique/DrapeauSomalie.png", "../images/Afrique/DrapeauSomaliland.png", "../images/Afrique/DrapeauSwaziland.png", "../images/Afrique/DrapeauSoudan.png", "../images/Afrique/DrapeauTanzanie.png", "../images/Afrique/DrapeauTogo.png", "../images/Afrique/DrapeauTunisie.png", "../images/Afrique/DrapeauOuganda.png", "../images/Afrique/DrapeauCôte d'Ivoire.png", "../images/Afrique/DrapeauZambie.png", "../images/Afrique/DrapeauZimbabwe.png","../images/Asie/DrapeauAfghanistan.png","../images/Asie/DrapeauArabie Saoudite.png","../images/Asie/DrapeauAzerbaïdjan.png","../images/Asie/DrapeauBahreïn.png",
+            "../images/Asie/DrapeauBangladesh.png","../images/Asie/DrapeauBhoutan.png","../images/Asie/DrapeauBirmanie.png",
+            "../images/Asie/DrapeauBrunei.png","../images/Asie/DrapeauChine.png",
+            "../images/Asie/DrapeauPhilippines.png","../images/Asie/DrapeauHaut-Karabakh.png",
+            "../images/Asie/DrapeauInde.png","../images/Asie/DrapeauIndonésie.png","../images/Asie/DrapeauIrak.png",
+            "../images/Asie/DrapeauIran.png","../images/Asie/DrapeauIsraël.png","../images/Asie/DrapeauJapon.png",
+            "../images/Asie/DrapeauYémen.png","../images/Asie/DrapeauJordanie.png","../images/Asie/DrapeauCambodge.png",
+            "../images/Asie/DrapeauQatar.png","../images/Asie/DrapeauKazakhstan.png","../images/Asie/DrapeauKirghizistan.png",
+            "../images/Asie/DrapeauCorée du Sud.png","../images/Asie/DrapeauKoweït.png","../images/Asie/DrapeauLaos.png",
+            "../images/Asie/DrapeauLiban.png","../images/Asie/DrapeauMaldives.png","../images/Asie/DrapeauMalaisie.png",
+            "../images/Asie/DrapeauMongolie.png","../images/Asie/DrapeauNépal.png","../images/Asie/DrapeauOman.png",
+            "../images/Asie/DrapeauOssétie du Sud.png","../images/Asie/DrapeauPakistan.png","../images/Asie/DrapeauSingapour.png",
+            "../images/Asie/DrapeauSri Lanka.png","../images/Asie/DrapeauSyrie.png","../images/Asie/DrapeauTadjikistan.png",
+            "../images/Asie/DrapeauThaïlande.png","../images/Asie/DrapeauTurquie.png","../images/Asie/DrapeauTurkménistan.png",
+            "../images/Asie/DrapeauOuzbékistan.png","../images/Asie/DrapeauVietnam.png",
+            "../images/Asie/DrapeauEmirats Arabes Unis.png"];
+
+        let flags = ["Albanie", "Allemagne", "Andorre" , "Autriche", "Arménie", "Belgique", "Biélorussie" , "Bosnie-Herzégovine","Bulgarie", "Chypre", "Croatie", "Danemark", "Espagne", "Estonie", "Finlande", "France", "Géorgie", "Grèce", "Hongrie", "Irlande", "Islande" ,"Italie", "Kosovo" ,"Lettonie", "Liechtenstein" , "Lituanie", "Luxembourg", "Macédoine" ,"Malte", "Moldavie", "Monaco","Monténégro","Norvège", "Pays-Bas", "Pologne", "Portugal", "République tchèque", "Roumanie", "Royaume-Uni", "Russie", "Saint-Marin", "Serbie", "Slovaquie", "Slovénie", "Suède", "Suisse" , "Turquie", "Ukraine", "Vatican","Antigua-et-Barbuda", "Argentine", "Bahamas", "Barbade", "Belize", "Bolivie", "Brésil", "Canada", "Chili", "Colombie", "Costa Rica", "Cuba", "Dominique", "Equateur", "Etats-Unis", "El Salvador", "Grenade", "Guatemala", "Guyane",  "Haïti", "Honduras", "Jamaïque", "Mexique", "Nicaragua", "Panama", "Paraguay", "Pérou", "Puerto Rico", "République dominicaine", "Saint-Kitts-et-Nevis" , "Sainte-Lucie", "Suriname", "Trinité-et-Tobago",  "Uruguay", "Venezuela","Australie", "Fidji", "Kiribati", "Micronésie", "Nauru", "Nouvelle-Zélande", "Palau", "Papouasie-Nouvelle-Guinée", "Samoa", "Timor oriental", "Tonga", "Tuvalu", "Vanuatu", "Îles Marshall", "Îles Salomon","Algérie", "Angola", "Bénin", "Botswana", "Burkina Faso", "Burundi", "Tchad", "Djibouti", "RD Congo", "Egypte", "Érythrée", "Ethiopie", "Gabon", "Gambie", "Ghana", "Guinée", "Guinée-Bissau", "Guinée équatoriale", "Cameroun", "Kenya", "Comores", "Congo", "Lesotho", "Libéria", "Libye", "Madagascar", "Malawi", "Mali", "Maroc", "Mauritanie", "île Maurice", "Mozambique", "Namibie", "Niger", "Nigeria", "Afrique du Sud", "République CA", "Cap-Vert", "Rwanda", "Sahara occidental", "Sénégal", "Seychelles", "Sierra Leone", "Somalie", "Somaliland", "Swaziland", "Soudan", "Tanzanie", "Togo", "Tunisie", "Ouganda", "Cote d'Ivoire", "Zambie", "Zimbabwe","Afghanistan", "Arabie Saoudite", "Azerbaïdjan", "Bahreïn", "Bangladesh", "Bhoutan", "Birmanie", "Brunei", "Chine", "Philippines", "Haut-Karabakh", "Inde", "Indonésie", "Irak", "Iran", "Israël", "Japon", "Yémen", "Jordanie", "Cambodge", "Qatar", "Kazakhstan", "Kirghizistan", "Corée du Sud", "Koweït", "Laos", "Liban", "Maldives", "Malaisie", "Mongolie", "Népal", "Oman", "Ossétie du Sud", "Pakistan", "Singapour", "Sri Lanka", "Syrie", "Tadjikistan", "Thaïlande", "Turquie", "Turkménistan", "Ouzbékistan", "Vietnam", "Emirats Arabes Unis"];
+
+        let reponses = [...document.getElementsByClassName("reponse")];
+        let RepADeviner;
+        let dejafait = []
+        let afficheerreur = []
+        let drapeautempo = []
+
+        let currentFlag = Math.floor(Math.random() * flags.length)
+        document.getElementById("flag").src = affichedrapeau[currentFlag];
+        let point = 0;
+        let tour = 0;
+
+        const genererRéponses= () => {
+        let currentFlag = Math.floor(Math.random() * flags.length)
+            drapeautempo.push(flags[currentFlag])
+            return `${flags[currentFlag]}`;       
+        };
+
+        const initialiser = () => {
+            drapeautempo = []
+          let reponseCorrecte = Math.floor(Math.random() * 4); // 0 et 3
+          reponses.forEach((rep) => (rep.textContent = genererRéponses()));
+          RepADeviner = reponses[reponseCorrecte].textContent;
+          if (dejafait.includes("../images/Monde/Drapeau"+RepADeviner+".png") || drapeautempo.filter((element, index, arr) => arr.indexOf(element) !== index).length > 0) {
+            initialiser()
+          } 
+          document.getElementById("flag").src = "../images/Monde/Drapeau"+RepADeviner+".png";
+        };
+
+        const verifierReponse = (e) => {
+            if (affichedrapeau.length === 0) {
+                document.querySelector(".Fin").innerHTML = "Jeu terminé";
+                return;
+              } else {
+              
+              affichedrapeau.splice(RepADeviner, 1);
+              dejafait.push("../images/Monde/Drapeau" + RepADeviner + ".png");
+              let valeurCliquee = e.target.textContent;
+              document.getElementById("flagréponse").src = "../images/Monde/Drapeau" + RepADeviner + ".png";
+              document.querySelector(".Proposition").innerHTML= "Proposition : " + valeurCliquee;
+                document.querySelector(".Réponse").innerHTML= "Réponse : " + RepADeviner;
+              
+              if (valeurCliquee != RepADeviner) {
+                tour = tour + 1
+                let listItem = document.createElement("li");
+                let newFigure = document.createElement("figure");
+                let newImage = new Image();
+                newImage.src = "../images/Monde/Drapeau"+RepADeviner+".png";
+                listItem.append(newImage);         
+                GRID.append(listItem);
+                GRID.append("Vous avez dit : " + valeurCliquee);
+                GRID.append(document.createElement("br"));
+                GRID.append("La bonne réponse etait : " + RepADeviner + "❌");
+                document.querySelector(".Compteur").innerHTML= "Score : " + point + "/" + tour;
+                if (affichedrapeau.length === 0) {
+                document.querySelector(".Fin").innerHTML = "Jeu terminé";
+                return;
+              }
+              } else {
+                point = point + 1
+                tour = tour + 1
+                let listItem = document.createElement("li");
+                let newFigure = document.createElement("figure");
+                let newImage = new Image();
+                newImage.src = "../images/Monde/Drapeau"+RepADeviner+".png";
+                listItem.append(newImage);         
+                GRID.append(listItem);
+                GRID.append("Bonne réponse !");
+                GRID.append(document.createElement("br"));
+                GRID.append("La réponse etait : " + RepADeviner + "✅");
+                document.querySelector(".Compteur").innerHTML= "Score : " + point + "/" + tour;
+                if (affichedrapeau.length === 0) {
+                document.querySelector(".Fin").innerHTML = "Jeu terminé";
+                return;
+              }
+              }
+              initialiser()
+              }
+            };
+
+
+        reponses.forEach((rep) => {
+          rep.addEventListener("click", verifierReponse);
+        });
+
+        initialiser();
+
+    });
+function reset(){
+            window.location.reload(false);       
+        }
+    </script>
+
+    </body>
+</html>
