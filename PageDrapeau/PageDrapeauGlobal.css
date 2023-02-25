@@ -12756,19 +12756,19 @@ li img {
 
 .reponses {
   display: grid;
-  grid-template-columns: repeat(2, 120px);
-  gap: 20px;
+  grid-template-columns: repeat(2, 125px);
+  gap: 15px;
   margin-top: 140px;
 }
 
 .reponse {
     background-color: white;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     margin-top: -10px;
     color: #000;
     border-radius: 21px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     cursor: pointer;
     transition: ease-in-out 0.4s
 }
