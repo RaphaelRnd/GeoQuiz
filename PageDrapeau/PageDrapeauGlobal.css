@@ -12747,15 +12747,15 @@ li img {
 .reponses {
   display: grid;
   grid-template-columns: repeat(2, 120px);
-  gap: 15px;
-  margin-top: 140px;
+  gap: 5px;
+  margin-top: 130px;
 }
 
 .reponse {
     background-color: white;
     text-align: center;
-    font-size: 14px;
-    margin-top: -10px;
+    font-size: 13px;
+    margin-top: 10px;
     color: #000;
     border-radius: 21px;
     padding: 10px 0px;
