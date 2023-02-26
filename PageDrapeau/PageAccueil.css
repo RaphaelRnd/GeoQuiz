@@ -12151,7 +12151,7 @@ li img {
   height: 370px;
   width: 400px;
   top: 50px;
-  border-style: solid;
+
   background-color: #1a2530;
   border-radius: 15px;
   margin-right: -23px;
@@ -12405,7 +12405,6 @@ li img {
   height: 370px;
   width: 500px;
   top: 30px;
-  border-style: solid;
   background-color: #1a2530;
   border-radius: 15px;
 }
@@ -12659,7 +12658,6 @@ li img {
   height: 410px;
   width: 320px;
   top: 15px;
-  border-style: solid;
   background-color: #1a2530;
   border-radius: 15px;
 }
