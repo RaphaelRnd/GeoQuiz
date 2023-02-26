@@ -12196,11 +12196,6 @@ li img {
     border-radius: 21px;
     padding: 18px 36px;
     cursor: pointer;
-    transition: ease-in-out 0.4s
-}
-
-.reponse:hover {
-  box-shadow: inset 400px 0 0 0 #14cfaa;
 }
 
 .score {
@@ -12483,11 +12478,6 @@ li img {
     border-radius: 21px;
     padding: 18px 36px;
     cursor: pointer;
-    transition: ease-in-out 0.4s
-}
-
-.reponse:hover {
-  box-shadow: inset 400px 0 0 0 #14cfaa;
 }
 
 .score {
@@ -12756,7 +12746,7 @@ li img {
 
 .reponses {
   display: grid;
-  grid-template-columns: repeat(2, 140px);
+  grid-template-columns: repeat(2, 120px);
   gap: 15px;
   margin-top: 140px;
 }
@@ -12770,12 +12760,9 @@ li img {
     border-radius: 21px;
     padding: 10px 0px;
     cursor: pointer;
-    transition: ease-in-out 0.4s
+    
 }
 
-.reponse:hover {
-  box-shadow: inset 400px 0 0 0 #14cfaa;
-}
 
 .score {
   margin-top: 60px;
